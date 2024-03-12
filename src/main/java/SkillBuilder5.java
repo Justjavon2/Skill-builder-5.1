@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * This class provides various Skill Builder 5 - Array
  * exercises.
@@ -18,7 +20,13 @@ public class SkillBuilder5
     public static double[] prefixAverage(double[] data)
     {
         //TODO: replace this line with your code.
-        return null;
+        double virgilSum = 0;
+        double[] virgilGreat = new double[data.length];
+        for(int virgilJanae = 0; virgilJanae < data.length; virgilJanae++){
+            virgilSum += data[virgilJanae];
+            virgilGreat[virgilJanae] = virgilSum / (virgilJanae + 1);
+        }
+        return virgilGreat;
     }
 
     /**
@@ -31,8 +39,13 @@ public class SkillBuilder5
      */
     public static int  indexOf(int searchValue, int[] anArray)
     {
-        //TODO: replace this line with your code.
-        return 0;
+
+         for( int Vergil = 0; Vergil< anArray.length;Vergil+=1){
+             if ( anArray[Vergil] == searchValue){
+                return Vergil;
+             }
+         }
+        return -1;
     }
 
     /**
@@ -45,8 +58,13 @@ public class SkillBuilder5
      */
     public static int  indexOf(String s, String[] anArray)
     {
-        //TODO: replace this line with your code.
-        return 0;
+
+        for( int Vergilkayla = 0; Vergilkayla< anArray.length;Vergilkayla+=1){
+            if ( anArray[Vergilkayla] == s){
+                return Vergilkayla;
+            }
+        }
+        return -1;
     }
 
     /**
@@ -58,16 +76,27 @@ public class SkillBuilder5
      */
     public static String[] remove(String s, String[] anArray)
     {
-        // add your code here
-        return null;
+        String [] VergilAri = new String [anArray.length];
+        int i = 0;
+        for (int Vergilcoco = 0; Vergilcoco < anArray.length; Vergilcoco+=1){
+            if(anArray[Vergilcoco] != s){
+                VergilAri[i] = anArray[Vergilcoco];
+                i+=1;
+            }
+        }
+        return Arrays.copyOfRange(VergilAri,0,i);
     }
 
     /**
      * Reverses an array of integers.
      * @param anArray the array whose contents should be reversed.
-     */
+     *///for loop
     public static void reverse(int[] anArray)
     {
-        // add your code here
+        for(int i = 0; i < anArray.length / 2; i++) {
+            int temp = anArray[i];
+            anArray[i] = anArray[anArray.length - i - 1];
+            anArray[anArray.length - i - 1] = temp;
+        }
     }
 }

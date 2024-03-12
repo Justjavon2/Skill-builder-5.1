@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class SkillBuilder5Test {
@@ -137,6 +139,7 @@ class SkillBuilder5Test {
     void reverse_1() {
         int[] a = {88,15,34,8,34,89,55,12};
         int[] expected = {12,55,89,34,8,34,15,88};
+        System.out.println(Arrays.toString(a));
         SkillBuilder5.reverse(a);
         assertArrayEquals(expected,a, "Expected: "+expected+"\nActual: "+a);
     }
